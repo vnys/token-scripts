@@ -18,20 +18,21 @@ const typeScaleSteps = [...Array(numOfTypeScaleSteps).keys()].map((num) =>
 const spacingSteps = [...Array(6).keys()].map((num) => String(4 + num * 4)) // ["4", "8", ... "24"]
 
 const hPad = (spacing) => `{spacing.${spacing}}`
-const vPad = (density) => (typeScale) => (spacing) =>
+const vPad = (typeScale) => (density) => (spacing) =>
   `({spacing.${spacing}} * 2 + {capHeight.snappedToGrid.${typeScale}} - {lineHeight.${density}.${typeScale}}) / 2`
 
-const vPadTight = vPad(density.TIGHT)
-const vPadTightTypeScale = typeScaleSteps.map(vPadTight)
-const spacing12 = vPadTightTypeScale.map((fn) => fn(12))
+//const vPadTight = vPad(density.TIGHT)
+const vPadTypeScale = typeScaleSteps.map(vPad) // typeScaleSteps.map((step) => vPad(step))
+const vPadTight = vPadTypeScale.map((fn) => fn(density.TIGHT))
+//const spacing12 = vPadTightTypeScale.map((fn) => fn(12))
 
-console.log(spacing12)
+console.log(vPadTight)
 
 const type = {
   COMPOSITION: 'composition',
 }
 
-const vPadTight0 = vPadTight(0)
+//const vPadTight0 = vPadTight(0)
 
 const snappedToGrid = {}
 
@@ -54,7 +55,7 @@ let data = {
 
 //console.log(pipe(hPad)(16))
 //console.log(vPadTight0(12))
-console.log(pipe(hPad, vPadTight0)(16))
+//console.log(pipe(hPad, vPadTight0)(16))
 
 async function writeToFile(density) {
   await fs.writeFile(
