@@ -2,6 +2,7 @@
   "core": {
     "container": {
       "tight": {
+        "snappedToGrid": {},
         "centered": {}
       }
     }

@@ -1,4 +1,5 @@
 import { promises as fs } from 'fs'
+import { pipe } from './utils.mjs'
 
 const density = {
   TIGHT: 'tight',
@@ -17,14 +18,20 @@ const typeScaleSteps = [...Array(numOfTypeScaleSteps).keys()].map((num) =>
 const spacingSteps = [...Array(6).keys()].map((num) => String(4 + num * 4)) // ["4", "8", ... "24"]
 
 const hPad = (spacing) => `{spacing.${spacing}}`
-const vPad = (density) => (spacing) => (typeScale) =>
+const vPad = (density) => (typeScale) => (spacing) =>
   `({spacing.${spacing}} * 2 + {capHeight.snappedToGrid.${typeScale}} - {lineHeight.${density}.${typeScale}}) / 2`
+
+const vPadTight = vPad(density.TIGHT)
+const vPadTightTypeScale = typeScaleSteps.map(vPadTight)
+const spacing12 = vPadTightTypeScale.map((fn) => fn(12))
+
+console.log(spacing12)
 
 const type = {
   COMPOSITION: 'composition',
 }
 
-const vPadTight = vPad(density.TIGHT)
+const vPadTight0 = vPadTight(0)
 
 const snappedToGrid = {}
 
@@ -44,6 +51,10 @@ let data = {
     },
   },
 }
+
+//console.log(pipe(hPad)(16))
+//console.log(vPadTight0(12))
+console.log(pipe(hPad, vPadTight0)(16))
 
 async function writeToFile(density) {
   await fs.writeFile(
