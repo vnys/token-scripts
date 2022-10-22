@@ -11,11 +11,11 @@ const density = {
 const numOfTypeScaleSteps = 10
 const gridResolution = 4
 
-const typeScaleSteps = [...Array(numOfTypeScaleSteps).keys()].map((num) =>
+const typeScale = [...Array(numOfTypeScaleSteps).keys()].map((num) =>
   String(num),
 ) // ["0", "1", ... "9"]
 
-const spacingSteps = [...Array(6).keys()].map((num) => String(4 + num * 4)) // ["4", "8", ... "24"]
+const spacing = [...Array(6).keys()].map((num) => String(4 + num * 4)) // ["4", "8", ... "24"]
 
 const hPad = (spacing) => `{spacing.${spacing}}`
 const vPad = (typeScale) => (density) => (spacing) =>
@@ -25,6 +25,11 @@ const vPad = (typeScale) => (density) => (spacing) =>
 const vPadTypeScale = typeScaleSteps.map(vPad) // typeScaleSteps.map((step) => vPad(step))
 const vPadTight = vPadTypeScale.map((fn) => fn(density.TIGHT))
 //const spacing12 = vPadTightTypeScale.map((fn) => fn(12))
+
+const spacingStep = (spacing) => ({
+  horisontalPadding: hPad(spacing),
+  //  verticalPadding:
+})
 
 console.log(vPadTight)
 
@@ -53,9 +58,24 @@ let data = {
   },
 }
 
-//console.log(pipe(hPad)(16))
-//console.log(vPadTight0(12))
-//console.log(pipe(hPad, vPadTight0)(16))
+const verticalSnapped = () => ({
+  paddingBottom: `({spacing.${spacing}} * 2 + {capHeight.snappedToGrid.${typeScale}} - {lineHeight.${density}.${typeScale}}) / 2`,
+  paddingTop: `{spacing.${spacing}} * 2 + {grid.base} * ceil({capHeight.rounded.${typeScale}} / {grid.base}) - {lineHeight.${density}.${typeScale}} - roundTo({spacing.${spacing}} - ({lineHeight.${density}.${typeScale}} - {capHeight.rounded.${typeScale}}) / 2)`,
+})
+
+const verticalCentered = () => ({
+  verticalPadding: `({spacing.${spacing}} * 2 + {capHeight.snappedToGrid.${typeScale}} - {lineHeight.${density}.${typeScale}}) / 2`,
+})
+
+const template = () => ({
+  value: {
+    horisontalPadding: `{spacing.${spacing}}`,
+    ...(snapped ? verticalSnapped() : verticalCentered()),
+    typography: ``,
+  },
+  type: type.COMPOSITION,
+  descpription: `Some description`,
+})
 
 async function writeToFile(density) {
   await fs.writeFile(
