@@ -38,8 +38,9 @@ const verticalCentered = (density, spacing, typeScale) => ({
   verticalPadding: `({spacing.${spacing}} * 2 + {capHeight.snappedToGrid.${typeScale}} - {lineHeight.${density}.${typeScale}}) / 2`,
 })
 
-const template = (density, snapped, vertSpace, typeScale) => ({
+const template = (density, snapped, horSpace, vertSpace, typeScale) => ({
   value: {
+    horisontalPadding: `{spacing.${horSpace}}`,
     ...(snapped
       ? verticalSnapped(density, vertSpace, typeScale)
       : verticalCentered(density, vertSpace, typeScale)),
@@ -54,13 +55,38 @@ const data = (density) => ({
       [density]: {
         snappedToGrid: Object.fromEntries(
           spacing
-            .slice(3, 5)
-            .map((vertSpace) => [
-              `v${vertSpace}`,
+            .slice(0, 2)
+            .map((horSpace) => [
+              `h${horSpace}`,
               Object.fromEntries(
-                typeScale.map((type) => [
-                  `t${type}`,
-                  template(density, true, vertSpace, type),
+                spacing
+                  .slice(3, 5)
+                  .map((vertSpace) => [
+                    `v${vertSpace}`,
+                    Object.fromEntries(
+                      typeScale.map((type) => [
+                        `t${type}`,
+                        template(density, true, horSpace, vertSpace, type),
+                      ]),
+                    ),
+                  ]),
+              ),
+            ]),
+        ),
+        centered: Object.fromEntries(
+          spacing
+            //.slice(0, 3)
+            .map((horSpace) => [
+              `horisontal${horSpace}`,
+              Object.fromEntries(
+                spacing.map((vertSpace) => [
+                  `vertical${vertSpace}`,
+                  Object.fromEntries(
+                    typeScale.map((type) => [
+                      `${type}`,
+                      template(density, false, horSpace, vertSpace, type),
+                    ]),
+                  ),
                 ]),
               ),
             ]),
