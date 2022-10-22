@@ -11,47 +11,21 @@ const density = {
 const numOfTypeScaleSteps = 10
 const gridResolution = 4
 
-const typeScale = [...Array(numOfTypeScaleSteps).keys()]
+const typeScale = [...Array(numOfTypeScaleSteps).keys()] // [0, 1, ... 9]
 
-//.map((num) => String(num),) // ["0", "1", ... "9"]
-
-const add4 = (num) => num + 4
-const quadruple = (num) => num * 4
+const bumpOneGridStep = (num) => num + gridResolution
+const spreadToGrid = (num) => num * gridResolution
 
 /**
- * @returns {[]}
+ * @returns {Number}
  */
-const spacing = [...Array(6).keys()].map((num) => pipe(quadruple, add4)(num)) // ["4", "8", ... "24"]
-
-const hPad = (spacing) => `{spacing.${spacing}}`
-const vPad = (typeScale) => (density) => (spacing) =>
-  `({spacing.${spacing}} * 2 + {capHeight.snappedToGrid.${typeScale}} - {lineHeight.${density}.${typeScale}}) / 2`
-
-//const vPadTight = vPad(density.TIGHT)
-const vPadTypeScale = typeScale.map(vPad) // typeScale.map((step) => vPad(step))
-const vPadTight = vPadTypeScale.map((fn) => fn(density.TIGHT))
-//const spacing12 = vPadTightTypeScale.map((fn) => fn(12))
-
-const spacingStep = (spacing) => ({
-  horisontalPadding: hPad(spacing),
-  //  verticalPadding:
-})
-
-console.log(vPadTight)
+const spacing = [...Array(6).keys()].map((num) =>
+  pipe(spreadToGrid, bumpOneGridStep)(num),
+) // [4, 8, ... 24]
 
 const type = {
   COMPOSITION: 'composition',
 }
-
-//const vPadTight0 = vPadTight(0)
-
-const snappedToGrid = {}
-
-// spacingSteps.map((space) => (snappedToGrid[space] = {}))
-
-// const snappedToGrid = spacingSteps.reduce((obj, curr, i) => {
-//   curr: 'foo'
-// }, {})
 
 /**
 @param {density} density
@@ -75,7 +49,6 @@ const template = (density, snapped, horSpace, vertSpace, typeScale) => ({
     typography: `{typography.${density}.${typeScale}}`,
   },
   type: type.COMPOSITION,
-  descpription: `Horisontal spacing: ${horSpace}`,
 })
 
 const data = (density) => ({
@@ -83,36 +56,40 @@ const data = (density) => ({
     container: {
       [density]: {
         snappedToGrid: Object.fromEntries(
-          spacing.map((horSpace) => [
-            horSpace,
-            Object.fromEntries(
-              spacing.map((vertSpace) => [
-                vertSpace,
-                Object.fromEntries(
-                  typeScale.map((type) => [
-                    type,
-                    template(density, true, horSpace, vertSpace, type),
-                  ]),
-                ),
-              ]),
-            ),
-          ]),
+          spacing
+            //.slice(0, 3)
+            .map((horSpace) => [
+              `horisontal${horSpace}`,
+              Object.fromEntries(
+                spacing.map((vertSpace) => [
+                  `vertical${vertSpace}`,
+                  Object.fromEntries(
+                    typeScale.map((type) => [
+                      `typeScale${type}`,
+                      template(density, true, horSpace, vertSpace, type),
+                    ]),
+                  ),
+                ]),
+              ),
+            ]),
         ),
         centered: Object.fromEntries(
-          spacing.map((horSpace) => [
-            horSpace,
-            Object.fromEntries(
-              spacing.map((vertSpace) => [
-                vertSpace,
-                Object.fromEntries(
-                  typeScale.map((type) => [
-                    type,
-                    template(density, false, horSpace, vertSpace, type),
-                  ]),
-                ),
-              ]),
-            ),
-          ]),
+          spacing
+            //.slice(0, 3)
+            .map((horSpace) => [
+              `horisontal${horSpace}`,
+              Object.fromEntries(
+                spacing.map((vertSpace) => [
+                  `vertical${vertSpace}`,
+                  Object.fromEntries(
+                    typeScale.map((type) => [
+                      `typeScale${type}`,
+                      template(density, false, horSpace, vertSpace, type),
+                    ]),
+                  ),
+                ]),
+              ),
+            ]),
         ),
       },
     },
@@ -131,3 +108,5 @@ async function writeToFile(density) {
 
 writeToFile(density.TIGHT)
 writeToFile(density.COMPRESSED)
+writeToFile(density.COMFORTABLE)
+writeToFile(density.RELAXED)
