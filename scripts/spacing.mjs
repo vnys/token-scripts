@@ -11,18 +11,24 @@ const density = {
 const numOfTypeScaleSteps = 10
 const gridResolution = 4
 
-const typeScale = [...Array(numOfTypeScaleSteps).keys()].map((num) =>
-  String(num),
-) // ["0", "1", ... "9"]
+const typeScale = [...Array(numOfTypeScaleSteps).keys()]
 
-const spacing = [...Array(6).keys()].map((num) => String(4 + num * 4)) // ["4", "8", ... "24"]
+//.map((num) => String(num),) // ["0", "1", ... "9"]
+
+const add4 = (num) => num + 4
+const quadruple = (num) => num * 4
+
+/**
+ * @returns {[]}
+ */
+const spacing = [...Array(6).keys()].map((num) => pipe(quadruple, add4)(num)) // ["4", "8", ... "24"]
 
 const hPad = (spacing) => `{spacing.${spacing}}`
 const vPad = (typeScale) => (density) => (spacing) =>
   `({spacing.${spacing}} * 2 + {capHeight.snappedToGrid.${typeScale}} - {lineHeight.${density}.${typeScale}}) / 2`
 
 //const vPadTight = vPad(density.TIGHT)
-const vPadTypeScale = typeScaleSteps.map(vPad) // typeScaleSteps.map((step) => vPad(step))
+const vPadTypeScale = typeScale.map(vPad) // typeScale.map((step) => vPad(step))
 const vPadTight = vPadTypeScale.map((fn) => fn(density.TIGHT))
 //const spacing12 = vPadTightTypeScale.map((fn) => fn(12))
 
@@ -47,19 +53,9 @@ const snappedToGrid = {}
 //   curr: 'foo'
 // }, {})
 
-let data = {
-  core: {
-    container: {
-      [density.TIGHT]: {
-        snappedToGrid,
-        centered: {},
-      },
-    },
-  },
-}
 /**
 @param {density} density
-@param {String} spacing
+@param {typeof <spacing>} spacing
 */
 const verticalSnapped = (density, spacing, typeScale) => ({
   paddingBottom: `({spacing.${spacing}} * 2 + {capHeight.snappedToGrid.${typeScale}} - {lineHeight.${density}.${typeScale}}) / 2`,
@@ -70,20 +66,63 @@ const verticalCentered = (density, spacing, typeScale) => ({
   verticalPadding: `({spacing.${spacing}} * 2 + {capHeight.snappedToGrid.${typeScale}} - {lineHeight.${density}.${typeScale}}) / 2`,
 })
 
-const template = (density, spacing, typeScale) => ({
+const template = (density, snapped, horSpace, vertSpace, typeScale) => ({
   value: {
-    horisontalPadding: `{spacing.${spacing}}`,
-    ...(snapped ? verticalSnapped() : verticalCentered()),
-    typography: ``,
+    horisontalPadding: `{spacing.${horSpace}}`,
+    ...(snapped
+      ? verticalSnapped(density, vertSpace, typeScale)
+      : verticalCentered(density, vertSpace, typeScale)),
+    typography: `{typography.${density}.${typeScale}}`,
   },
   type: type.COMPOSITION,
-  descpription: `Some description`,
+  descpription: `Horisontal spacing: ${horSpace}`,
+})
+
+const data = (density) => ({
+  core: {
+    container: {
+      [density]: {
+        snappedToGrid: Object.fromEntries(
+          spacing.map((horSpace) => [
+            horSpace,
+            Object.fromEntries(
+              spacing.map((vertSpace) => [
+                vertSpace,
+                Object.fromEntries(
+                  typeScale.map((type) => [
+                    type,
+                    template(density, true, horSpace, vertSpace, type),
+                  ]),
+                ),
+              ]),
+            ),
+          ]),
+        ),
+        centered: Object.fromEntries(
+          spacing.map((horSpace) => [
+            horSpace,
+            Object.fromEntries(
+              spacing.map((vertSpace) => [
+                vertSpace,
+                Object.fromEntries(
+                  typeScale.map((type) => [
+                    type,
+                    template(density, false, horSpace, vertSpace, type),
+                  ]),
+                ),
+              ]),
+            ),
+          ]),
+        ),
+      },
+    },
+  },
 })
 
 async function writeToFile(density) {
   await fs.writeFile(
     `../build/${density}.json`,
-    JSON.stringify(data, null, 2),
+    JSON.stringify(data(density), null, 2),
     {
       encoding: 'utf-8',
     },
@@ -91,3 +130,4 @@ async function writeToFile(density) {
 }
 
 writeToFile(density.TIGHT)
+writeToFile(density.COMPRESSED)
