@@ -57,17 +57,20 @@ let data = {
     },
   },
 }
-
-const verticalSnapped = () => ({
+/**
+@param {density} density
+@param {String} spacing
+*/
+const verticalSnapped = (density, spacing, typeScale) => ({
   paddingBottom: `({spacing.${spacing}} * 2 + {capHeight.snappedToGrid.${typeScale}} - {lineHeight.${density}.${typeScale}}) / 2`,
   paddingTop: `{spacing.${spacing}} * 2 + {grid.base} * ceil({capHeight.rounded.${typeScale}} / {grid.base}) - {lineHeight.${density}.${typeScale}} - roundTo({spacing.${spacing}} - ({lineHeight.${density}.${typeScale}} - {capHeight.rounded.${typeScale}}) / 2)`,
 })
 
-const verticalCentered = () => ({
+const verticalCentered = (density, spacing, typeScale) => ({
   verticalPadding: `({spacing.${spacing}} * 2 + {capHeight.snappedToGrid.${typeScale}} - {lineHeight.${density}.${typeScale}}) / 2`,
 })
 
-const template = () => ({
+const template = (density, spacing, typeScale) => ({
   value: {
     horisontalPadding: `{spacing.${spacing}}`,
     ...(snapped ? verticalSnapped() : verticalCentered()),
