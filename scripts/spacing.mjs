@@ -64,7 +64,7 @@ const data = (density) => ({
               `verticalPadding${vertSpace}`,
               Object.fromEntries(
                 typeScale.map((type) => [
-                  `fontSize${type}`,
+                  `fs${type}`,
                   template(density, false, vertSpace, type),
                 ]),
               ),
