@@ -1,18 +1,27 @@
 {
   "const": {
     "capHeight": {
+      "value": "0.7272",
+      "type": "other",
+      "description": "The cap height of the Inter typeface (0.7272em)"
+    },
+    "capHeightOrg": {
       "value": "0.7",
       "type": "other",
       "description": "The cap height of the Equinor typeface (0.7em)"
     }
   },
   "fontFamily": {
-    "default": {
+    "org": {
       "value": "Equinor",
       "type": "fontFamilies"
     },
     "mono": {
       "value": "Equinor Mono",
+      "type": "fontFamilies"
+    },
+    "default": {
+      "value": "Inter",
       "type": "fontFamilies"
     }
   },
