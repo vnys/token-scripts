@@ -22,12 +22,12 @@ const type = {
 }
 
 const verticalSnapped = (density, spacing, typeScale) => ({
-  paddingBottom: `({spacing.${spacing}} * 2 + {capHeight.snappedToGrid.${typeScale}} - {lineHeight.${density}.${typeScale}}) / 2`,
-  paddingTop: `{spacing.${spacing}} * 2 + {const.grid} * ceil({capHeight.rounded.${typeScale}} / {const.grid}) - {lineHeight.${density}.${typeScale}} - roundTo({spacing.${spacing}} - ({lineHeight.${density}.${typeScale}} - {capHeight.rounded.${typeScale}}) / 2)`,
+  paddingBottom: `(${spacing} * 2 + {capHeight.snappedToGrid.${typeScale}} - {lineHeight.${density}.${typeScale}}) / 2`,
+  paddingTop: `${spacing} * 2 + {const.grid} * ceil({capHeight.rounded.${typeScale}} / {const.grid}) - {lineHeight.${density}.${typeScale}} - roundTo(${spacing} - ({lineHeight.${density}.${typeScale}} - {capHeight.rounded.${typeScale}}) / 2)`,
 })
 
 const verticalCentered = (density, spacing, typeScale) => ({
-  verticalPadding: `({spacing.${spacing}} * 2 + {capHeight.snappedToGrid.${typeScale}} - {lineHeight.${density}.${typeScale}}) / 2`,
+  verticalPadding: `(${spacing} * 2 + {capHeight.snappedToGrid.${typeScale}} - {lineHeight.${density}.${typeScale}}) / 2`,
 })
 
 const template = (density, snapped, vertSpace, typeScale) => ({
@@ -48,10 +48,10 @@ const data = (density) => ({
           spacing
             .slice(3, 5)
             .map((vertSpace) => [
-              `v${vertSpace}`,
+              `verticalPadding${vertSpace}`,
               Object.fromEntries(
                 typeScale.map((type) => [
-                  `t${type}`,
+                  `fontSize${type}`,
                   template(density, true, vertSpace, type),
                 ]),
               ),
@@ -61,10 +61,10 @@ const data = (density) => ({
           spacing
             .slice(3, 5)
             .map((vertSpace) => [
-              `v${vertSpace}`,
+              `verticalPadding${vertSpace}`,
               Object.fromEntries(
                 typeScale.map((type) => [
-                  `t${type}`,
+                  `fontSize${type}`,
                   template(density, false, vertSpace, type),
                 ]),
               ),
