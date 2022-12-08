@@ -77,7 +77,7 @@ const data = (density) => ({
 
 async function writeToFile(density) {
   await fs.writeFile(
-    `../build/${density}.json`,
+    `tokens/build/${density}.json`,
     JSON.stringify(data(density), null, 2),
     {
       encoding: 'utf-8',
