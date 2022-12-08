@@ -1,0 +1,9 @@
+{
+  "tokenSetOrder": [
+    "core/const",
+    "core/spacing",
+    "core/typography",
+    "build/compressed",
+    "build/tight"
+  ]
+}

@@ -22,7 +22,15 @@
             },
             "t2": {
               "value": {
-                "paddingBottom": "({spacing.12} * 2 + {capHeight.snappedToGrid.2} - {lineHeight.compressed.2}) / 2",
+                "paddingBottom": "(12 * 2 + {capHeight.snappedToGrid.2} - {lineHeight.compressed.2}) / 2",
+                "paddingTop": "{spacing.12} * 2 + {const.grid} * ceil({capHeight.rounded.2} / {const.grid}) - {lineHeight.compressed.2} - roundTo({spacing.12} - ({lineHeight.compressed.2} - {capHeight.rounded.2}) / 2)",
+                "typography": "{typography.compressed.2}"
+              },
+              "type": "composition"
+            },
+            "t2-debug": {
+              "value": {
+                "paddingBottom": "12 - 3",
                 "paddingTop": "{spacing.12} * 2 + {const.grid} * ceil({capHeight.rounded.2} / {const.grid}) - {lineHeight.compressed.2} - roundTo({spacing.12} - ({lineHeight.compressed.2} - {capHeight.rounded.2}) / 2)",
                 "typography": "{typography.compressed.2}"
               },
