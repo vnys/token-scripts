@@ -1,2 +1,3 @@
 # token-scripts
-A collection of build scripts for Figma Tokens
+
+Some build scripts for Figma Tokens
