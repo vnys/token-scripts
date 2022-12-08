@@ -170,70 +170,70 @@
         },
         "offGrid": {
           "verticalPadding12": {
-            "fontSize0": {
+            "fs0": {
               "value": {
                 "verticalPadding": "(12 * 2 + {capHeight.snappedToGrid.0} - {lineHeight.tight.0}) / 2",
                 "typography": "{typography.tight.0}"
               },
               "type": "composition"
             },
-            "fontSize1": {
+            "fs1": {
               "value": {
                 "verticalPadding": "(12 * 2 + {capHeight.snappedToGrid.1} - {lineHeight.tight.1}) / 2",
                 "typography": "{typography.tight.1}"
               },
               "type": "composition"
             },
-            "fontSize2": {
+            "fs2": {
               "value": {
                 "verticalPadding": "(12 * 2 + {capHeight.snappedToGrid.2} - {lineHeight.tight.2}) / 2",
                 "typography": "{typography.tight.2}"
               },
               "type": "composition"
             },
-            "fontSize3": {
+            "fs3": {
               "value": {
                 "verticalPadding": "(12 * 2 + {capHeight.snappedToGrid.3} - {lineHeight.tight.3}) / 2",
                 "typography": "{typography.tight.3}"
               },
               "type": "composition"
             },
-            "fontSize4": {
+            "fs4": {
               "value": {
                 "verticalPadding": "(12 * 2 + {capHeight.snappedToGrid.4} - {lineHeight.tight.4}) / 2",
                 "typography": "{typography.tight.4}"
               },
               "type": "composition"
             },
-            "fontSize5": {
+            "fs5": {
               "value": {
                 "verticalPadding": "(12 * 2 + {capHeight.snappedToGrid.5} - {lineHeight.tight.5}) / 2",
                 "typography": "{typography.tight.5}"
               },
               "type": "composition"
             },
-            "fontSize6": {
+            "fs6": {
               "value": {
                 "verticalPadding": "(12 * 2 + {capHeight.snappedToGrid.6} - {lineHeight.tight.6}) / 2",
                 "typography": "{typography.tight.6}"
               },
               "type": "composition"
             },
-            "fontSize7": {
+            "fs7": {
               "value": {
                 "verticalPadding": "(12 * 2 + {capHeight.snappedToGrid.7} - {lineHeight.tight.7}) / 2",
                 "typography": "{typography.tight.7}"
               },
               "type": "composition"
             },
-            "fontSize8": {
+            "fs8": {
               "value": {
                 "verticalPadding": "(12 * 2 + {capHeight.snappedToGrid.8} - {lineHeight.tight.8}) / 2",
                 "typography": "{typography.tight.8}"
               },
               "type": "composition"
             },
-            "fontSize9": {
+            "fs9": {
               "value": {
                 "verticalPadding": "(12 * 2 + {capHeight.snappedToGrid.9} - {lineHeight.tight.9}) / 2",
                 "typography": "{typography.tight.9}"
@@ -242,70 +242,70 @@
             }
           },
           "verticalPadding16": {
-            "fontSize0": {
+            "fs0": {
               "value": {
                 "verticalPadding": "(16 * 2 + {capHeight.snappedToGrid.0} - {lineHeight.tight.0}) / 2",
                 "typography": "{typography.tight.0}"
               },
               "type": "composition"
             },
-            "fontSize1": {
+            "fs1": {
               "value": {
                 "verticalPadding": "(16 * 2 + {capHeight.snappedToGrid.1} - {lineHeight.tight.1}) / 2",
                 "typography": "{typography.tight.1}"
               },
               "type": "composition"
             },
-            "fontSize2": {
+            "fs2": {
               "value": {
                 "verticalPadding": "(16 * 2 + {capHeight.snappedToGrid.2} - {lineHeight.tight.2}) / 2",
                 "typography": "{typography.tight.2}"
               },
               "type": "composition"
             },
-            "fontSize3": {
+            "fs3": {
               "value": {
                 "verticalPadding": "(16 * 2 + {capHeight.snappedToGrid.3} - {lineHeight.tight.3}) / 2",
                 "typography": "{typography.tight.3}"
               },
               "type": "composition"
             },
-            "fontSize4": {
+            "fs4": {
               "value": {
                 "verticalPadding": "(16 * 2 + {capHeight.snappedToGrid.4} - {lineHeight.tight.4}) / 2",
                 "typography": "{typography.tight.4}"
               },
               "type": "composition"
             },
-            "fontSize5": {
+            "fs5": {
               "value": {
                 "verticalPadding": "(16 * 2 + {capHeight.snappedToGrid.5} - {lineHeight.tight.5}) / 2",
                 "typography": "{typography.tight.5}"
               },
               "type": "composition"
             },
-            "fontSize6": {
+            "fs6": {
               "value": {
                 "verticalPadding": "(16 * 2 + {capHeight.snappedToGrid.6} - {lineHeight.tight.6}) / 2",
                 "typography": "{typography.tight.6}"
               },
               "type": "composition"
             },
-            "fontSize7": {
+            "fs7": {
               "value": {
                 "verticalPadding": "(16 * 2 + {capHeight.snappedToGrid.7} - {lineHeight.tight.7}) / 2",
                 "typography": "{typography.tight.7}"
               },
               "type": "composition"
             },
-            "fontSize8": {
+            "fs8": {
               "value": {
                 "verticalPadding": "(16 * 2 + {capHeight.snappedToGrid.8} - {lineHeight.tight.8}) / 2",
                 "typography": "{typography.tight.8}"
               },
               "type": "composition"
             },
-            "fontSize9": {
+            "fs9": {
               "value": {
                 "verticalPadding": "(16 * 2 + {capHeight.snappedToGrid.9} - {lineHeight.tight.9}) / 2",
                 "typography": "{typography.tight.9}"

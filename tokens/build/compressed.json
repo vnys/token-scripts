@@ -170,70 +170,70 @@
         },
         "offGrid": {
           "verticalPadding12": {
-            "fontSize0": {
+            "fs0": {
               "value": {
                 "verticalPadding": "(12 * 2 + {capHeight.snappedToGrid.0} - {lineHeight.compressed.0}) / 2",
                 "typography": "{typography.compressed.0}"
               },
               "type": "composition"
             },
-            "fontSize1": {
+            "fs1": {
               "value": {
                 "verticalPadding": "(12 * 2 + {capHeight.snappedToGrid.1} - {lineHeight.compressed.1}) / 2",
                 "typography": "{typography.compressed.1}"
               },
               "type": "composition"
             },
-            "fontSize2": {
+            "fs2": {
               "value": {
                 "verticalPadding": "(12 * 2 + {capHeight.snappedToGrid.2} - {lineHeight.compressed.2}) / 2",
                 "typography": "{typography.compressed.2}"
               },
               "type": "composition"
             },
-            "fontSize3": {
+            "fs3": {
               "value": {
                 "verticalPadding": "(12 * 2 + {capHeight.snappedToGrid.3} - {lineHeight.compressed.3}) / 2",
                 "typography": "{typography.compressed.3}"
               },
               "type": "composition"
             },
-            "fontSize4": {
+            "fs4": {
               "value": {
                 "verticalPadding": "(12 * 2 + {capHeight.snappedToGrid.4} - {lineHeight.compressed.4}) / 2",
                 "typography": "{typography.compressed.4}"
               },
               "type": "composition"
             },
-            "fontSize5": {
+            "fs5": {
               "value": {
                 "verticalPadding": "(12 * 2 + {capHeight.snappedToGrid.5} - {lineHeight.compressed.5}) / 2",
                 "typography": "{typography.compressed.5}"
               },
               "type": "composition"
             },
-            "fontSize6": {
+            "fs6": {
               "value": {
                 "verticalPadding": "(12 * 2 + {capHeight.snappedToGrid.6} - {lineHeight.compressed.6}) / 2",
                 "typography": "{typography.compressed.6}"
               },
               "type": "composition"
             },
-            "fontSize7": {
+            "fs7": {
               "value": {
                 "verticalPadding": "(12 * 2 + {capHeight.snappedToGrid.7} - {lineHeight.compressed.7}) / 2",
                 "typography": "{typography.compressed.7}"
               },
               "type": "composition"
             },
-            "fontSize8": {
+            "fs8": {
               "value": {
                 "verticalPadding": "(12 * 2 + {capHeight.snappedToGrid.8} - {lineHeight.compressed.8}) / 2",
                 "typography": "{typography.compressed.8}"
               },
               "type": "composition"
             },
-            "fontSize9": {
+            "fs9": {
               "value": {
                 "verticalPadding": "(12 * 2 + {capHeight.snappedToGrid.9} - {lineHeight.compressed.9}) / 2",
                 "typography": "{typography.compressed.9}"
@@ -242,70 +242,70 @@
             }
           },
           "verticalPadding16": {
-            "fontSize0": {
+            "fs0": {
               "value": {
                 "verticalPadding": "(16 * 2 + {capHeight.snappedToGrid.0} - {lineHeight.compressed.0}) / 2",
                 "typography": "{typography.compressed.0}"
               },
               "type": "composition"
             },
-            "fontSize1": {
+            "fs1": {
               "value": {
                 "verticalPadding": "(16 * 2 + {capHeight.snappedToGrid.1} - {lineHeight.compressed.1}) / 2",
                 "typography": "{typography.compressed.1}"
               },
               "type": "composition"
             },
-            "fontSize2": {
+            "fs2": {
               "value": {
                 "verticalPadding": "(16 * 2 + {capHeight.snappedToGrid.2} - {lineHeight.compressed.2}) / 2",
                 "typography": "{typography.compressed.2}"
               },
               "type": "composition"
             },
-            "fontSize3": {
+            "fs3": {
               "value": {
                 "verticalPadding": "(16 * 2 + {capHeight.snappedToGrid.3} - {lineHeight.compressed.3}) / 2",
                 "typography": "{typography.compressed.3}"
               },
               "type": "composition"
             },
-            "fontSize4": {
+            "fs4": {
               "value": {
                 "verticalPadding": "(16 * 2 + {capHeight.snappedToGrid.4} - {lineHeight.compressed.4}) / 2",
                 "typography": "{typography.compressed.4}"
               },
               "type": "composition"
             },
-            "fontSize5": {
+            "fs5": {
               "value": {
                 "verticalPadding": "(16 * 2 + {capHeight.snappedToGrid.5} - {lineHeight.compressed.5}) / 2",
                 "typography": "{typography.compressed.5}"
               },
               "type": "composition"
             },
-            "fontSize6": {
+            "fs6": {
               "value": {
                 "verticalPadding": "(16 * 2 + {capHeight.snappedToGrid.6} - {lineHeight.compressed.6}) / 2",
                 "typography": "{typography.compressed.6}"
               },
               "type": "composition"
             },
-            "fontSize7": {
+            "fs7": {
               "value": {
                 "verticalPadding": "(16 * 2 + {capHeight.snappedToGrid.7} - {lineHeight.compressed.7}) / 2",
                 "typography": "{typography.compressed.7}"
               },
               "type": "composition"
             },
-            "fontSize8": {
+            "fs8": {
               "value": {
                 "verticalPadding": "(16 * 2 + {capHeight.snappedToGrid.8} - {lineHeight.compressed.8}) / 2",
                 "typography": "{typography.compressed.8}"
               },
               "type": "composition"
             },
-            "fontSize9": {
+            "fs9": {
               "value": {
                 "verticalPadding": "(16 * 2 + {capHeight.snappedToGrid.9} - {lineHeight.compressed.9}) / 2",
                 "typography": "{typography.compressed.9}"
