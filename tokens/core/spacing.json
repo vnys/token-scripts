@@ -100,5 +100,91 @@
       "value": "24",
       "type": "spacing"
     }
+  },
+  "grid": {
+    "0": {
+      "value": "{const.grid}*0",
+      "type": "other"
+    },
+    "1": {
+      "value": "{const.grid}*1",
+      "type": "other"
+    },
+    "2": {
+      "value": "{const.grid}*2",
+      "type": "other"
+    },
+    "3": {
+      "value": "{const.grid}*3",
+      "type": "other"
+    },
+    "4": {
+      "value": "{const.grid}*4",
+      "type": "other"
+    },
+    "5": {
+      "value": "{const.grid}*5",
+      "type": "other"
+    },
+    "6": {
+      "value": "{const.grid}*6",
+      "type": "other"
+    },
+    "7": {
+      "value": "{const.grid}*7",
+      "type": "other"
+    },
+    "8": {
+      "value": "{const.grid}*8",
+      "type": "other"
+    },
+    "9": {
+      "value": "{const.grid}*9",
+      "type": "other"
+    },
+    "10": {
+      "value": "{const.grid}*10",
+      "type": "other"
+    },
+    "11": {
+      "value": "{const.grid}*11",
+      "type": "other"
+    },
+    "12": {
+      "value": "{const.grid}*12",
+      "type": "other"
+    },
+    "13": {
+      "value": "{const.grid}*13",
+      "type": "other"
+    },
+    "14": {
+      "value": "{const.grid}*14",
+      "type": "other"
+    },
+    "15": {
+      "value": "{const.grid}*15",
+      "type": "other"
+    },
+    "16": {
+      "value": "{const.grid}*16",
+      "type": "other"
+    },
+    "17": {
+      "value": "{const.grid}*17",
+      "type": "other"
+    },
+    "18": {
+      "value": "{const.grid}*18",
+      "type": "other"
+    },
+    "19": {
+      "value": "{const.grid}*19",
+      "type": "other"
+    },
+    "20": {
+      "value": "{const.grid}*20",
+      "type": "other"
+    }
   }
 }
