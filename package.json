@@ -1,5 +1,8 @@
 {
   "name": "token-scripts",
   "version": "1",
-  "private": true
+  "private": true,
+  "scripts": {
+    "build": "node scripts/spacing.mjs"
+  }
 }

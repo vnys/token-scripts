@@ -1,5 +1,4 @@
 import { promises as fs } from 'fs'
-import { pipe } from './utils.mjs'
 
 const density = {
   TIGHT: 'tight',
@@ -16,22 +15,15 @@ const typeScale = [...Array(numOfTypeScaleSteps).keys()] // [0, 1, ... 9]
 const bumpOneGridStep = (num) => num + gridResolution
 const spreadToGrid = (num) => num * gridResolution
 
-/**
- * @returns {Number}
- */
 const spacing = [...Array(7).keys()].map(spreadToGrid) // [0, 4, 8, ... 24]
 
 const type = {
   COMPOSITION: 'composition',
 }
 
-/**
-@param {density} density
-@param {typeof <spacing>} spacing
-*/
 const verticalSnapped = (density, spacing, typeScale) => ({
   paddingBottom: `({spacing.${spacing}} * 2 + {capHeight.snappedToGrid.${typeScale}} - {lineHeight.${density}.${typeScale}}) / 2`,
-  paddingTop: `{spacing.${spacing}} * 2 + {grid.base} * ceil({capHeight.rounded.${typeScale}} / {grid.base}) - {lineHeight.${density}.${typeScale}} - roundTo({spacing.${spacing}} - ({lineHeight.${density}.${typeScale}} - {capHeight.rounded.${typeScale}}) / 2)`,
+  paddingTop: `{spacing.${spacing}} * 2 + {const.grid} * ceil({capHeight.rounded.${typeScale}} / {const.grid}) - {lineHeight.${density}.${typeScale}} - roundTo({spacing.${spacing}} - ({lineHeight.${density}.${typeScale}} - {capHeight.rounded.${typeScale}}) / 2)`,
 })
 
 const verticalCentered = (density, spacing, typeScale) => ({
@@ -53,43 +45,39 @@ const data = (density) => ({
   core: {
     container: {
       [density]: {
-        snappedToGrid: Object.fromEntries(
-          spacing
-            .slice(0, 2)
-            .map((horSpace) => [
-              `h${horSpace}`,
-              Object.fromEntries(
-                spacing
-                  .slice(3, 5)
-                  .map((vertSpace) => [
-                    `v${vertSpace}`,
-                    Object.fromEntries(
-                      typeScale.map((type) => [
-                        `t${type}`,
-                        template(density, true, horSpace, vertSpace, type),
-                      ]),
-                    ),
-                  ]),
-              ),
-            ]),
-        ),
-        centered: Object.fromEntries(
-          spacing
-            //.slice(0, 3)
-            .map((horSpace) => [
-              `horisontal${horSpace}`,
-              Object.fromEntries(
-                spacing.map((vertSpace) => [
-                  `vertical${vertSpace}`,
+        onGrid: Object.fromEntries(
+          spacing.map((horSpace) => [
+            `h${horSpace}`,
+            Object.fromEntries(
+              spacing
+                .slice(3, 5)
+                .map((vertSpace) => [
+                  `v${vertSpace}`,
                   Object.fromEntries(
                     typeScale.map((type) => [
-                      `${type}`,
-                      template(density, false, horSpace, vertSpace, type),
+                      `t${type}`,
+                      template(density, true, horSpace, vertSpace, type),
                     ]),
                   ),
                 ]),
-              ),
-            ]),
+            ),
+          ]),
+        ),
+        offGrid: Object.fromEntries(
+          spacing.map((horSpace) => [
+            `h${horSpace}`,
+            Object.fromEntries(
+              spacing.map((vertSpace) => [
+                `v${vertSpace}`,
+                Object.fromEntries(
+                  typeScale.map((type) => [
+                    `${type}`,
+                    template(density, false, horSpace, vertSpace, type),
+                  ]),
+                ),
+              ]),
+            ),
+          ]),
         ),
       },
     },

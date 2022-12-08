@@ -2,7 +2,7 @@
   "core": {
     "container": {
       "tight": {
-        "snappedToGrid": {
+        "onGrid": {
           "v12": {
             "t0": {
               "value": {
@@ -162,6 +162,152 @@
               "value": {
                 "paddingBottom": "({spacing.16} * 2 + {capHeight.snappedToGrid.9} - {lineHeight.tight.9}) / 2",
                 "paddingTop": "{spacing.16} * 2 + {grid.base} * ceil({capHeight.rounded.9} / {grid.base}) - {lineHeight.tight.9} - roundTo({spacing.16} - ({lineHeight.tight.9} - {capHeight.rounded.9}) / 2)",
+                "typography": "{typography.tight.9}"
+              },
+              "type": "composition"
+            }
+          }
+        },
+        "offGrid": {
+          "v12": {
+            "t0": {
+              "value": {
+                "verticalPadding": "({spacing.12} * 2 + {capHeight.snappedToGrid.0} - {lineHeight.tight.0}) / 2",
+                "typography": "{typography.tight.0}"
+              },
+              "type": "composition"
+            },
+            "t1": {
+              "value": {
+                "verticalPadding": "({spacing.12} * 2 + {capHeight.snappedToGrid.1} - {lineHeight.tight.1}) / 2",
+                "typography": "{typography.tight.1}"
+              },
+              "type": "composition"
+            },
+            "t2": {
+              "value": {
+                "verticalPadding": "({spacing.12} * 2 + {capHeight.snappedToGrid.2} - {lineHeight.tight.2}) / 2",
+                "typography": "{typography.tight.2}"
+              },
+              "type": "composition"
+            },
+            "t3": {
+              "value": {
+                "verticalPadding": "({spacing.12} * 2 + {capHeight.snappedToGrid.3} - {lineHeight.tight.3}) / 2",
+                "typography": "{typography.tight.3}"
+              },
+              "type": "composition"
+            },
+            "t4": {
+              "value": {
+                "verticalPadding": "({spacing.12} * 2 + {capHeight.snappedToGrid.4} - {lineHeight.tight.4}) / 2",
+                "typography": "{typography.tight.4}"
+              },
+              "type": "composition"
+            },
+            "t5": {
+              "value": {
+                "verticalPadding": "({spacing.12} * 2 + {capHeight.snappedToGrid.5} - {lineHeight.tight.5}) / 2",
+                "typography": "{typography.tight.5}"
+              },
+              "type": "composition"
+            },
+            "t6": {
+              "value": {
+                "verticalPadding": "({spacing.12} * 2 + {capHeight.snappedToGrid.6} - {lineHeight.tight.6}) / 2",
+                "typography": "{typography.tight.6}"
+              },
+              "type": "composition"
+            },
+            "t7": {
+              "value": {
+                "verticalPadding": "({spacing.12} * 2 + {capHeight.snappedToGrid.7} - {lineHeight.tight.7}) / 2",
+                "typography": "{typography.tight.7}"
+              },
+              "type": "composition"
+            },
+            "t8": {
+              "value": {
+                "verticalPadding": "({spacing.12} * 2 + {capHeight.snappedToGrid.8} - {lineHeight.tight.8}) / 2",
+                "typography": "{typography.tight.8}"
+              },
+              "type": "composition"
+            },
+            "t9": {
+              "value": {
+                "verticalPadding": "({spacing.12} * 2 + {capHeight.snappedToGrid.9} - {lineHeight.tight.9}) / 2",
+                "typography": "{typography.tight.9}"
+              },
+              "type": "composition"
+            }
+          },
+          "v16": {
+            "t0": {
+              "value": {
+                "verticalPadding": "({spacing.16} * 2 + {capHeight.snappedToGrid.0} - {lineHeight.tight.0}) / 2",
+                "typography": "{typography.tight.0}"
+              },
+              "type": "composition"
+            },
+            "t1": {
+              "value": {
+                "verticalPadding": "({spacing.16} * 2 + {capHeight.snappedToGrid.1} - {lineHeight.tight.1}) / 2",
+                "typography": "{typography.tight.1}"
+              },
+              "type": "composition"
+            },
+            "t2": {
+              "value": {
+                "verticalPadding": "({spacing.16} * 2 + {capHeight.snappedToGrid.2} - {lineHeight.tight.2}) / 2",
+                "typography": "{typography.tight.2}"
+              },
+              "type": "composition"
+            },
+            "t3": {
+              "value": {
+                "verticalPadding": "({spacing.16} * 2 + {capHeight.snappedToGrid.3} - {lineHeight.tight.3}) / 2",
+                "typography": "{typography.tight.3}"
+              },
+              "type": "composition"
+            },
+            "t4": {
+              "value": {
+                "verticalPadding": "({spacing.16} * 2 + {capHeight.snappedToGrid.4} - {lineHeight.tight.4}) / 2",
+                "typography": "{typography.tight.4}"
+              },
+              "type": "composition"
+            },
+            "t5": {
+              "value": {
+                "verticalPadding": "({spacing.16} * 2 + {capHeight.snappedToGrid.5} - {lineHeight.tight.5}) / 2",
+                "typography": "{typography.tight.5}"
+              },
+              "type": "composition"
+            },
+            "t6": {
+              "value": {
+                "verticalPadding": "({spacing.16} * 2 + {capHeight.snappedToGrid.6} - {lineHeight.tight.6}) / 2",
+                "typography": "{typography.tight.6}"
+              },
+              "type": "composition"
+            },
+            "t7": {
+              "value": {
+                "verticalPadding": "({spacing.16} * 2 + {capHeight.snappedToGrid.7} - {lineHeight.tight.7}) / 2",
+                "typography": "{typography.tight.7}"
+              },
+              "type": "composition"
+            },
+            "t8": {
+              "value": {
+                "verticalPadding": "({spacing.16} * 2 + {capHeight.snappedToGrid.8} - {lineHeight.tight.8}) / 2",
+                "typography": "{typography.tight.8}"
+              },
+              "type": "composition"
+            },
+            "t9": {
+              "value": {
+                "verticalPadding": "({spacing.16} * 2 + {capHeight.snappedToGrid.9} - {lineHeight.tight.9}) / 2",
                 "typography": "{typography.tight.9}"
               },
               "type": "composition"

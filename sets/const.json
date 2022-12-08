@@ -1,0 +1,39 @@
+{
+  "const": {
+    "r": {
+      "value": "2",
+      "type": "other",
+      "description": "Ratio"
+    },
+    "f0": {
+      "value": "16",
+      "type": "other",
+      "description": "Fundamental frequency"
+    },
+    "n": {
+      "value": "5",
+      "type": "other",
+      "description": "Number of notes"
+    },
+    "grid": {
+      "value": "4",
+      "type": "other"
+    },
+    "tight": {
+      "value": "1",
+      "type": "other"
+    },
+    "compressed": {
+      "value": "1.1",
+      "type": "other"
+    },
+    "comfortable": {
+      "value": "1.25",
+      "type": "other"
+    },
+    "relaxed": {
+      "value": "1.5",
+      "type": "other"
+    }
+  }
+}
