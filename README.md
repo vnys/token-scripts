@@ -8,4 +8,4 @@ The structure of an EDS button is an outer autolayout with only horisontal paddi
 
 These tokens only deal with the inner label autolayout. So if we want a container which has a calculated height of 36px, with a textframe with a font-size of 14px and a line-height of 16px, and we also want the base line to align with the grid lines of the layout grid, first create a textframe and add some text – then choose the token `typography.tight.2` and wrap that in an autolayout with the composite token `core.container.tight.onGrid.verticalPadding12.fs2`. If you now add layout grid with rows every 4px, the base line should sit snugly on the layout grid.
 
-The token sets that are generated are in the build folder, and should not be edited manually in Figma (read-only would be nice).
+The token sets in the build folder are built with javascript, and should not be edited manually in Figma (read-only for certain sets would be nice 😉).
