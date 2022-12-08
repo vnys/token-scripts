@@ -22,7 +22,7 @@ const type = {
 }
 
 const verticalSnapped = (density, spacing, typeScale) => ({
-  paddingBottom: `(${spacing} * 2 + {capHeight.snappedToGrid.${typeScale}} - {lineHeight.${density}.${typeScale}}) / 2`,
+  paddingBottom: `roundTo(${spacing} - ({lineHeight.${density}.${typeScale}} - {capHeight.rounded.${typeScale}}) / 2)`,
   paddingTop: `${spacing} * 2 + {const.grid} * ceil({capHeight.rounded.${typeScale}} / {const.grid}) - {lineHeight.${density}.${typeScale}} - roundTo(${spacing} - ({lineHeight.${density}.${typeScale}} - {capHeight.rounded.${typeScale}}) / 2)`,
 })
 
