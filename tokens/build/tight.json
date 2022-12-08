@@ -4,7 +4,7 @@
       "tight": {
         "onGrid": {
           "verticalPadding12": {
-            "fontSize0": {
+            "fs0": {
               "value": {
                 "paddingBottom": "roundTo(12 - ({lineHeight.tight.0} - {capHeight.rounded.0}) / 2)",
                 "paddingTop": "12 * 2 + {const.grid} * ceil({capHeight.rounded.0} / {const.grid}) - {lineHeight.tight.0} - roundTo(12 - ({lineHeight.tight.0} - {capHeight.rounded.0}) / 2)",
@@ -12,7 +12,7 @@
               },
               "type": "composition"
             },
-            "fontSize1": {
+            "fs1": {
               "value": {
                 "paddingBottom": "roundTo(12 - ({lineHeight.tight.1} - {capHeight.rounded.1}) / 2)",
                 "paddingTop": "12 * 2 + {const.grid} * ceil({capHeight.rounded.1} / {const.grid}) - {lineHeight.tight.1} - roundTo(12 - ({lineHeight.tight.1} - {capHeight.rounded.1}) / 2)",
@@ -20,7 +20,7 @@
               },
               "type": "composition"
             },
-            "fontSize2": {
+            "fs2": {
               "value": {
                 "paddingBottom": "roundTo(12 - ({lineHeight.tight.2} - {capHeight.rounded.2}) / 2)",
                 "paddingTop": "12 * 2 + {const.grid} * ceil({capHeight.rounded.2} / {const.grid}) - {lineHeight.tight.2} - roundTo(12 - ({lineHeight.tight.2} - {capHeight.rounded.2}) / 2)",
@@ -28,7 +28,7 @@
               },
               "type": "composition"
             },
-            "fontSize3": {
+            "fs3": {
               "value": {
                 "paddingBottom": "roundTo(12 - ({lineHeight.tight.3} - {capHeight.rounded.3}) / 2)",
                 "paddingTop": "12 * 2 + {const.grid} * ceil({capHeight.rounded.3} / {const.grid}) - {lineHeight.tight.3} - roundTo(12 - ({lineHeight.tight.3} - {capHeight.rounded.3}) / 2)",
@@ -36,7 +36,7 @@
               },
               "type": "composition"
             },
-            "fontSize4": {
+            "fs4": {
               "value": {
                 "paddingBottom": "roundTo(12 - ({lineHeight.tight.4} - {capHeight.rounded.4}) / 2)",
                 "paddingTop": "12 * 2 + {const.grid} * ceil({capHeight.rounded.4} / {const.grid}) - {lineHeight.tight.4} - roundTo(12 - ({lineHeight.tight.4} - {capHeight.rounded.4}) / 2)",
@@ -44,7 +44,7 @@
               },
               "type": "composition"
             },
-            "fontSize5": {
+            "fs5": {
               "value": {
                 "paddingBottom": "roundTo(12 - ({lineHeight.tight.5} - {capHeight.rounded.5}) / 2)",
                 "paddingTop": "12 * 2 + {const.grid} * ceil({capHeight.rounded.5} / {const.grid}) - {lineHeight.tight.5} - roundTo(12 - ({lineHeight.tight.5} - {capHeight.rounded.5}) / 2)",
@@ -52,7 +52,7 @@
               },
               "type": "composition"
             },
-            "fontSize6": {
+            "fs6": {
               "value": {
                 "paddingBottom": "roundTo(12 - ({lineHeight.tight.6} - {capHeight.rounded.6}) / 2)",
                 "paddingTop": "12 * 2 + {const.grid} * ceil({capHeight.rounded.6} / {const.grid}) - {lineHeight.tight.6} - roundTo(12 - ({lineHeight.tight.6} - {capHeight.rounded.6}) / 2)",
@@ -60,7 +60,7 @@
               },
               "type": "composition"
             },
-            "fontSize7": {
+            "fs7": {
               "value": {
                 "paddingBottom": "roundTo(12 - ({lineHeight.tight.7} - {capHeight.rounded.7}) / 2)",
                 "paddingTop": "12 * 2 + {const.grid} * ceil({capHeight.rounded.7} / {const.grid}) - {lineHeight.tight.7} - roundTo(12 - ({lineHeight.tight.7} - {capHeight.rounded.7}) / 2)",
@@ -68,7 +68,7 @@
               },
               "type": "composition"
             },
-            "fontSize8": {
+            "fs8": {
               "value": {
                 "paddingBottom": "roundTo(12 - ({lineHeight.tight.8} - {capHeight.rounded.8}) / 2)",
                 "paddingTop": "12 * 2 + {const.grid} * ceil({capHeight.rounded.8} / {const.grid}) - {lineHeight.tight.8} - roundTo(12 - ({lineHeight.tight.8} - {capHeight.rounded.8}) / 2)",
@@ -76,7 +76,7 @@
               },
               "type": "composition"
             },
-            "fontSize9": {
+            "fs9": {
               "value": {
                 "paddingBottom": "roundTo(12 - ({lineHeight.tight.9} - {capHeight.rounded.9}) / 2)",
                 "paddingTop": "12 * 2 + {const.grid} * ceil({capHeight.rounded.9} / {const.grid}) - {lineHeight.tight.9} - roundTo(12 - ({lineHeight.tight.9} - {capHeight.rounded.9}) / 2)",
@@ -86,7 +86,7 @@
             }
           },
           "verticalPadding16": {
-            "fontSize0": {
+            "fs0": {
               "value": {
                 "paddingBottom": "roundTo(16 - ({lineHeight.tight.0} - {capHeight.rounded.0}) / 2)",
                 "paddingTop": "16 * 2 + {const.grid} * ceil({capHeight.rounded.0} / {const.grid}) - {lineHeight.tight.0} - roundTo(16 - ({lineHeight.tight.0} - {capHeight.rounded.0}) / 2)",
@@ -94,7 +94,7 @@
               },
               "type": "composition"
             },
-            "fontSize1": {
+            "fs1": {
               "value": {
                 "paddingBottom": "roundTo(16 - ({lineHeight.tight.1} - {capHeight.rounded.1}) / 2)",
                 "paddingTop": "16 * 2 + {const.grid} * ceil({capHeight.rounded.1} / {const.grid}) - {lineHeight.tight.1} - roundTo(16 - ({lineHeight.tight.1} - {capHeight.rounded.1}) / 2)",
@@ -102,7 +102,7 @@
               },
               "type": "composition"
             },
-            "fontSize2": {
+            "fs2": {
               "value": {
                 "paddingBottom": "roundTo(16 - ({lineHeight.tight.2} - {capHeight.rounded.2}) / 2)",
                 "paddingTop": "16 * 2 + {const.grid} * ceil({capHeight.rounded.2} / {const.grid}) - {lineHeight.tight.2} - roundTo(16 - ({lineHeight.tight.2} - {capHeight.rounded.2}) / 2)",
@@ -110,7 +110,7 @@
               },
               "type": "composition"
             },
-            "fontSize3": {
+            "fs3": {
               "value": {
                 "paddingBottom": "roundTo(16 - ({lineHeight.tight.3} - {capHeight.rounded.3}) / 2)",
                 "paddingTop": "16 * 2 + {const.grid} * ceil({capHeight.rounded.3} / {const.grid}) - {lineHeight.tight.3} - roundTo(16 - ({lineHeight.tight.3} - {capHeight.rounded.3}) / 2)",
@@ -118,7 +118,7 @@
               },
               "type": "composition"
             },
-            "fontSize4": {
+            "fs4": {
               "value": {
                 "paddingBottom": "roundTo(16 - ({lineHeight.tight.4} - {capHeight.rounded.4}) / 2)",
                 "paddingTop": "16 * 2 + {const.grid} * ceil({capHeight.rounded.4} / {const.grid}) - {lineHeight.tight.4} - roundTo(16 - ({lineHeight.tight.4} - {capHeight.rounded.4}) / 2)",
@@ -126,7 +126,7 @@
               },
               "type": "composition"
             },
-            "fontSize5": {
+            "fs5": {
               "value": {
                 "paddingBottom": "roundTo(16 - ({lineHeight.tight.5} - {capHeight.rounded.5}) / 2)",
                 "paddingTop": "16 * 2 + {const.grid} * ceil({capHeight.rounded.5} / {const.grid}) - {lineHeight.tight.5} - roundTo(16 - ({lineHeight.tight.5} - {capHeight.rounded.5}) / 2)",
@@ -134,7 +134,7 @@
               },
               "type": "composition"
             },
-            "fontSize6": {
+            "fs6": {
               "value": {
                 "paddingBottom": "roundTo(16 - ({lineHeight.tight.6} - {capHeight.rounded.6}) / 2)",
                 "paddingTop": "16 * 2 + {const.grid} * ceil({capHeight.rounded.6} / {const.grid}) - {lineHeight.tight.6} - roundTo(16 - ({lineHeight.tight.6} - {capHeight.rounded.6}) / 2)",
@@ -142,7 +142,7 @@
               },
               "type": "composition"
             },
-            "fontSize7": {
+            "fs7": {
               "value": {
                 "paddingBottom": "roundTo(16 - ({lineHeight.tight.7} - {capHeight.rounded.7}) / 2)",
                 "paddingTop": "16 * 2 + {const.grid} * ceil({capHeight.rounded.7} / {const.grid}) - {lineHeight.tight.7} - roundTo(16 - ({lineHeight.tight.7} - {capHeight.rounded.7}) / 2)",
@@ -150,7 +150,7 @@
               },
               "type": "composition"
             },
-            "fontSize8": {
+            "fs8": {
               "value": {
                 "paddingBottom": "roundTo(16 - ({lineHeight.tight.8} - {capHeight.rounded.8}) / 2)",
                 "paddingTop": "16 * 2 + {const.grid} * ceil({capHeight.rounded.8} / {const.grid}) - {lineHeight.tight.8} - roundTo(16 - ({lineHeight.tight.8} - {capHeight.rounded.8}) / 2)",
@@ -158,7 +158,7 @@
               },
               "type": "composition"
             },
-            "fontSize9": {
+            "fs9": {
               "value": {
                 "paddingBottom": "roundTo(16 - ({lineHeight.tight.9} - {capHeight.rounded.9}) / 2)",
                 "paddingTop": "16 * 2 + {const.grid} * ceil({capHeight.rounded.9} / {const.grid}) - {lineHeight.tight.9} - roundTo(16 - ({lineHeight.tight.9} - {capHeight.rounded.9}) / 2)",
